@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="welcome-message">Cargando...</h1>
+
+        <form method="GET" class="form" onsubmit="handleConsultation(event)">
+            <h2 class="form__title">Escribe el nombre que deseas consultar</h2>
+        
+            <input type="text" placeholder="Nombre" class="form__input" id="name" name="name" required>
+
+            <button type="submit" class="form__submit">Consultar</button>
+            <button id="clear-button" class="form__clear-button">Limpiar Resultados</button>
+            <button onclick="window.location.href='./index.html';" class="back-to-home-button">Volver al inicio</button>
+        </form>
+
+        <div class="results-container">
+            <h2 class="results-title">Resultados de tu consulta</h2>
+            <div class="result-item">
+                <p id="gender-result">Género predicho:</p>
+            </div>
+            <div class="result-item">
+                <h3>Nacionalidades probables:</h3>
+                <ul id="nationality-results"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./JS/code.js"></script>
+    <script src="./JS/dashboard.js"></script>
+</body>
+</html>
